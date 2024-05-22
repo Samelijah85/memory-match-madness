@@ -1,0 +1,120 @@
+:root {
+    --md-sys-color-primary: rgb(0 106 96);
+    --md-sys-color-surface-tint: rgb(0 106 96);
+    --md-sys-color-on-primary: rgb(255 255 255);
+    --md-sys-color-primary-container: rgb(158 242 228);
+    --md-sys-color-on-primary-container: rgb(0 32 28);
+    --md-sys-color-secondary: rgb(74 99 95);
+    --md-sys-color-on-secondary: rgb(255 255 255);
+    --md-sys-color-secondary-container: rgb(204 232 226);
+    --md-sys-color-on-secondary-container: rgb(5 32 28);
+    --md-sys-color-tertiary: rgb(69 97 121);
+    --md-sys-color-on-tertiary: rgb(255 255 255);
+    --md-sys-color-tertiary-container: rgb(204 229 255);
+    --md-sys-color-on-tertiary-container: rgb(0 30 49);
+    --md-sys-color-error: rgb(186 26 26);
+    --md-sys-color-on-error: rgb(255 255 255);
+    --md-sys-color-error-container: rgb(255 218 214);
+    --md-sys-color-on-error-container: rgb(65 0 2);
+    --md-sys-color-background: rgb(244 251 248);
+    --md-sys-color-on-background: rgb(22 29 28);
+    --md-sys-color-surface: rgb(244 251 248);
+    --md-sys-color-on-surface: rgb(22 29 28);
+    --md-sys-color-surface-variant: rgb(218 229 225);
+    --md-sys-color-on-surface-variant: rgb(63 73 71);
+    --md-sys-color-outline: rgb(111 121 119);
+    --md-sys-color-outline-variant: rgb(190 201 198);
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+    --md-sys-color-inverse-surface: rgb(43 50 48);
+    --md-sys-color-inverse-on-surface: rgb(236 242 239);
+    --md-sys-color-inverse-primary: rgb(130 213 200);
+    --md-sys-color-primary-fixed: rgb(158 242 228);
+    --md-sys-color-on-primary-fixed: rgb(0 32 28);
+    --md-sys-color-primary-fixed-dim: rgb(130 213 200);
+    --md-sys-color-on-primary-fixed-variant: rgb(0 80 72);
+    --md-sys-color-secondary-fixed: rgb(204 232 226);
+    --md-sys-color-on-secondary-fixed: rgb(5 32 28);
+    --md-sys-color-secondary-fixed-dim: rgb(177 204 198);
+    --md-sys-color-on-secondary-fixed-variant: rgb(51 75 71);
+    --md-sys-color-tertiary-fixed: rgb(204 229 255);
+    --md-sys-color-on-tertiary-fixed: rgb(0 30 49);
+    --md-sys-color-tertiary-fixed-dim: rgb(173 202 230);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(45 73 97);
+    --md-sys-color-surface-dim: rgb(213 219 217);
+    --md-sys-color-surface-bright: rgb(244 251 248);
+    --md-sys-color-surface-container-lowest: rgb(255 255 255);
+    --md-sys-color-surface-container-low: rgb(239 245 242);
+    --md-sys-color-surface-container: rgb(233 239 237);
+    --md-sys-color-surface-container-high: rgb(227 234 231);
+    --md-sys-color-surface-container-highest: rgb(221 228 225);
+    background-color: #E0F7FA;
+  }
+
+body {
+    background-color: #E0F7FA;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 500px;
+    height: 700px;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+    padding: 10px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    cursor: pointer;
+    position: relative;
+    color: rgb(0 32 28);;
+}
+.flipped {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+.popped {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+div .game__options {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    padding: 10px;
+}
+
+div .option {
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
+    border-radius: 5px;
+    box-shadow: 0 0 4px #000;
+}
+
+div .option:hover {
+    background-color: var(--md-sys-color-on-primary-fixed-variant)
+}
