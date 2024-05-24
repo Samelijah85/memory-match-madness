@@ -8,7 +8,7 @@ class Card {
     constructor(id, value) {
         this.id = id;
         this.value = value;
-        this.imagePath = `/static/images/cards/${value}.jpeg`; // Set the image path based on value
+        this.imagePath = `../../static/images/cards/${value}.jpeg`; // Set the image path based on value
         this.score = 8; // Initial score for each card
         this.attempts = 0;
     }
