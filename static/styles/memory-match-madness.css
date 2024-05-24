@@ -60,6 +60,8 @@ body {
 
 h1 {
     color: var(--md-sys-color-primary);
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
 #game-board {
@@ -142,4 +144,33 @@ div .option:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: none; /* Hidden by default */
+}
+
+@media(width < 450px) {
+    #game-board {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card {
+        width: 60px;
+        height: 80px;
+    }
+
+    div .game__options {
+        width: 300px;
+    }
+
+    div .option {
+        width: 100px;
+        font-size: 1em;
+    }
+
+    #congrats-message {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
 }
