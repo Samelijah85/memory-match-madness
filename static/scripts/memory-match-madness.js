@@ -8,7 +8,7 @@ class Card {
     constructor(id, value) {
         this.id = id;
         this.value = value;
-        this.imagePath = `../../static/images/cards/${value}.jpeg`; // Set the image path based on value
+        this.imagePath = `https://raw.githubusercontent.com/Samelijah85/memory-match-madness/63eb61de5fe46955e571d37bc14379e3fe122ed1/static/images/cards/${value}.jpeg`; // Set the image path based on value
         this.score = 8; // Initial score for each card
         this.attempts = 0;
     }
