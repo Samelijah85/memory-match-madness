@@ -23,6 +23,19 @@ class Card {
         card.classList.add('card');
         card.id = this.id;
         card.dataset.value = this.value;
+
+        let cardFront = document.createElement('div');
+        cardFront.classList.add('card-front');
+        cardFront.textContent = "";
+
+        let cardBack = document.createElement('div');
+        cardBack.classList.add('card-back');
+        cardBack.style.backgroundImage = `url(${this.imagePath})`; // Set image as background
+        cardBack.textContent = ""; // Clear any text content
+
+        card.appendChild(cardFront);
+        card.appendChild(cardBack);
+
         card.onclick = () => this.flipCard(card);
         document.getElementById('game-board').appendChild(card);
     }
@@ -38,9 +51,6 @@ class Card {
             return;
         }
         card.classList.add('flipped');
-        card.style.backgroundImage = `url(${this.imagePath})`; // Set image as background
-        card.textContent = ""; // Clear any text content
-        //card.textContent = this.value;
         game.flippedCards.push(this);
         if (game.flippedCards.length === 2) {
             game.checkMatch();
@@ -56,13 +66,21 @@ class Card {
     resetCard() {
         let card = document.getElementById(this.id);
         card.classList.remove('flipped');
-        card.style.backgroundImage = ""; // Remove the image
-        card.textContent = ""; // Clear any text content
     }
 
     setCard() {
         let card = document.getElementById(this.id);
         card.textContent = this.id;
+    }
+
+    popCard() {
+        let card = document.getElementById(this.id);
+        card.classList.remove('flipped');
+        card.classList.add('popped');
+
+        let cardFront = card.querySelector('.card-front');
+        cardFront.classList.add('card-popped');
+        cardFront.classList.remove('card-front');
     }
 }
 
@@ -127,11 +145,9 @@ class MemoryMatchMadness {
 
     removeCards(card1, card2) {
         setTimeout(() => {
-            document.getElementById(card1.id).classList.add('popped');
-            document.getElementById(card2.id).classList.add('popped');
-            card1.resetCard();
-            card2.resetCard();
-        }, 500);
+            card1.popCard();
+            card2.popCard();
+        }, 1000);
     }
 
     resetCards(card1, card2) {
