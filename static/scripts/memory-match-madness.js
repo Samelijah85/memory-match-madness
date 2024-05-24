@@ -34,7 +34,7 @@ class Card {
      * @return {void} This function does not return a value.
      */
     flipCard(card) {
-        if (card.classList.contains('flipped') || game.flippedCards.length === 2) {
+        if (card.classList.contains('popped') || card.classList.contains('flipped') || game.flippedCards.length === 2) {
             return;
         }
         card.classList.add('flipped');
@@ -72,6 +72,16 @@ class MemoryMatchMadness {
         this.flippedCards = [];
         this.score = 0;
         this.matchedPairs = 0; // Track matched pairs
+        this.preloadImages();
+    }
+
+    preloadImages() {
+        const values = [0, 1, 2, 3, 4, 5, 6, 7];
+        this.images = values.map(value => {
+            const img = new Image();
+            img.src = `https://raw.githubusercontent.com/Samelijah85/memory-match-madness/63eb61de5fe46955e571d37bc14379e3fe122ed1/static/images/cards/${value}.jpeg`;
+            return img;
+        });
     }
 
     initGame() {
@@ -102,7 +112,7 @@ class MemoryMatchMadness {
                 this.showCongratsMessage();
             }
         } else {
-            setTimeout(() => this.resetCards(card1, card2), 2000);
+            setTimeout(() => this.resetCards(card1, card2), 1000);
         }
         this.flippedCards = [];
     }

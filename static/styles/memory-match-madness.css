@@ -53,6 +53,13 @@
 
 body {
     background-color: #E0F7FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--md-sys-color-primary);
 }
 
 #game-board {
@@ -60,21 +67,19 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    grid-gap: 10px;
-    margin: 20px auto;
-    width: 500px;
-    height: 700px;
+    width: 380px;
+    height: 500px;
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
     padding: 10px;
-    border: 5px solid #000;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
 }
 
 .card {
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 112px;
+    margin: 5px;
     background-color: var(--md-sys-color-primary); /* Teal primary color for cards */
     color: var(--md-sys-color-on-primary); /* White text for card values */
     display: flex;
@@ -100,7 +105,7 @@ body {
 div .game__options {
     display: flex;
     justify-content: space-around;
-    width: 500px;
+    width: 380px;
     padding: 10px;
 }
 
