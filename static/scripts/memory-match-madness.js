@@ -102,7 +102,7 @@ class MemoryMatchMadness {
                 this.showCongratsMessage();
             }
         } else {
-            setTimeout(() => this.resetCards(card1, card2), 1000);
+            setTimeout(() => this.resetCards(card1, card2), 2000);
         }
         this.flippedCards = [];
     }
