@@ -47,9 +47,9 @@ You can play Memory Match Madness directly in your browser by visiting the follo
 - Click a card to flip it and reveal the image.
 - Match pairs of cards with the same image.
 - Points are awarded based on the number of attempts:
-  - First attempt: Full score (e.g., 8 points)
-  - Second attempt: Half the score (e.g., 4 points)
-  - Third attempt: Half the previous score (e.g., 2 points)
+  - First attempt: Full score (8 points)
+  - Second attempt: Half the score (4 points)
+  - Third attempt: Half the previous score (2 points)
   - Subsequent attempts: Points continue to halve until zero
 - The game ends when all pairs are matched, and a congratulatory message with the final score is displayed.
 
