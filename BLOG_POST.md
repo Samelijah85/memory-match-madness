@@ -1,4 +1,3 @@
-```markdown
 ![Memory Match Madness](https://raw.githubusercontent.com/Samelijah85/memory-match-madness/main/static/images/favicon/android-chrome-512x512.png)
 
 # Memory Match Madness
