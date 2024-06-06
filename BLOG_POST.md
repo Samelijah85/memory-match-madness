@@ -32,6 +32,7 @@ Memory Match Madness was inspired by my childhood love for card games. Growing u
 ## Accomplishments
 
 **Architecture Diagram**:
+
 ![Architecture Diagram](https://raw.githubusercontent.com/Samelijah85/memory-match-madness/main/static/images/mmm-screenshot-1.png)
 
 **Technologies Used**:
